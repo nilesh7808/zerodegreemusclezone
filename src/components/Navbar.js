@@ -1,8 +1,15 @@
 import React from 'react';
-// import { Link } from "react-router-dom";
-import navbar from '../css/navbar.css';
+import '../css/navbar.css';
+import '../pages/Testimonials';
 
-const Navbar = () => {
+const Navbar = (props) => {
+    // console.log(props.value);
+    const handleSearch = (event) => {
+        const searchedInput = document.getElementById('searchedItem').value;
+        window.location = searchedInput;
+        event.preventDefault();
+    }
+
     return (
         <div>
             <nav className="navbar navbar-expand-lg">
@@ -23,11 +30,11 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li className="nav-item"><a className="nav-link active" href="tel: 09386511681">Call</a></li>
-                            <li className="nav-item"><a className="nav-link active" href="#">Map</a></li>
+                            <li className="nav-item"><a className="nav-link active" href="./map">Map</a></li>
                         </ul>
                         <form className="d-flex" role="search">
-                            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-                            <button className="btn btn-outline-success" type="submit">Search</button>
+                            <input className="form-control me-2" id='searchedItem' type="search" placeholder="Search" aria-label="Search" />
+                            <button className="btn btn-outline-success" onClick={handleSearch} type="submit">Search</button>
                         </form>
                     </div>
                 </div>

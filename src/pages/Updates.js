@@ -10,7 +10,7 @@ const Updates = () => {
     const [initialTimeThree, setFinalTimeThree] = useState();
     const [mins, setMins] = useState();
     const [date, setDate] = useState();
-    
+
     const getTimeOne = () => {
         const date = new Date();
         setDate(date.toDateString());
@@ -22,13 +22,13 @@ const Updates = () => {
         const date = new Date();
         const hours = date.getHours().toLocaleString();
         const minutes = date.getMinutes();
-        if(minutes >= 60){
+        if (minutes >= 60) {
             setMins("Hours");
         }
-        else if(hours >= 24){
+        else if (hours >= 24) {
             setMins("Days");
         }
-        else{
+        else {
             setMins("Minutes")
         }
 
@@ -88,8 +88,14 @@ const Updates = () => {
                             </div>
                         </div>
                     </div>
-                    <a type="button" className='btn btn-success float-start' href='tel: 09386511681' style={{ marginTop: '1rem', marginRight: '5rem', marginBottom: '2rem', marginLeft: '7rem' }}>Book Now</a>
-                    <a type="button" className='btn btn-success float-end' href='tel: 09386511681' style={{ marginTop: '1rem', marginRight: '6.6rem', marginBottom: '2rem', marginLeft: '1rem' }}>Call Now</a>
+                    <div className="row">
+                        <div className="col">
+                            <a type="button" className='btn btn-success float-start' href='tel: 09386511681' style={{ marginTop: '1rem', marginRight: '5rem', marginBottom: '2rem', marginLeft: '7rem' }}>Book Now</a>
+                        </div>
+                        <div className="col">
+                            <a type="button" className='btn btn-success float-end' href='tel: 09386511681' style={{ marginTop: '1rem', marginRight: '6.6rem', marginBottom: '2rem', marginLeft: '1rem' }}>Call Now</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

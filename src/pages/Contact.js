@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Button } from 'react-bootstrap';
 
-const Contact = () => {
+const Contact = (props) => {
     return (
         <div>
             <Container className='container text-center'>
@@ -13,7 +13,7 @@ const Contact = () => {
                     </div>
                     <div className="col-lg-4 col-md-auto">
                         <h4>Address</h4>
-                        <Button className="btn btn-success mt-2">Get Directions</Button>
+                        <a type='button' href='./map' className="btn btn-success mt-2">Get Directions</a>
                         <p className='text-center mt-3' style={{ fontFamily: 'sans-serif', fontWeight: '600' }}>
                             1st floor,Prakash Market <br />
                             near GD college<br />
